@@ -4,6 +4,7 @@ import LoginPage from '../pages/LoginPage'
 import InlineForm from '../components/UserComponet/CreateUser'
 import UserList from '../components/UserComponet/UserList'
 import UserManageProfile from '../components/UserComponet/UserManageProfile'
+import UserEdit from '../components/Forms/EditForm'
 
 export const RoutesConfig = [
   {
@@ -47,6 +48,12 @@ export const RoutesConfig = [
     exact: true,
     restricted: true,
     component: UserManageProfile,
+  },
+  {
+    path: '/user-edit',
+    exact: true,
+    restricted: true,
+    component: UserEdit,
   },
   
 ]

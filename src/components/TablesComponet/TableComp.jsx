@@ -1,8 +1,16 @@
 import React from 'react'
 import { Card, Table,Button } from "react-bootstrap";
+import { useHistory } from "react-router-dom";
 
 
 export default function TableComp({ data, tableHeaders, tableBodies }) {
+
+    const history = useHistory();
+    const routeChange = () => {
+        let path = `/user-edit`;
+        history.push(path);
+    }
+
     const getProperty = (obj, prop) => {
         var parts = prop.split(".");
 
@@ -45,7 +53,7 @@ export default function TableComp({ data, tableHeaders, tableBodies }) {
                                     <td key={body}>{getProperty(data, body)}</td>
                                 ) : (
                                     <td key={body}>
-                                        <Button >Edit</Button>
+                                        <Button onClick={routeChange}>Edit</Button>
                                     </td>
                                 )
                             )}
