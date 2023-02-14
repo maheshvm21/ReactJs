@@ -10,6 +10,7 @@ const LoginPage = () => {
   const { state, dispatch } = useAuthContext();
   const { mutate } = useUserlogin();
   let usehistory_=useHistory()
+  // const [user,setUser]=useState();
 
   useEffect(() => {
     // userLogin('then').then(res => {
@@ -34,16 +35,23 @@ const LoginPage = () => {
     localStorage.setItem('token',JSON.stringify({auth:true}))
     usehistory_.push('/dashboard')
   }
+
+  const handileChange=(e)=>{
+    console.log(e.target.value,'ggggg')
+
+    // setUser({
+    //   username:e.target.value
+    // })
+
+  }
+
   return (
-    <div>
-        
-        
+    <div>    
       <div className="container">
         <div className="form-box">
           <div className="header-form">
             <h5 className="text-center">
-              <i
-                
+              <i 
                 style={{ fontSize: "30px" }}
               >Login</i>
             </h5>
@@ -61,6 +69,7 @@ const LoginPage = () => {
                   type="text"
                   className="form-control"
                   placeholder="Username"
+                  onChange={(e)=>handileChange(e)}
                 />
               </div>
               <div className="input-group mb-3">

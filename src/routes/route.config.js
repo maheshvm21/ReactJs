@@ -1,7 +1,9 @@
 import Dashboard from '../components/Dashboard'
 import Reports from '../components/Reports'
-import ServiceTicketTable from '../components/ServiceTicketTable'
 import LoginPage from '../pages/LoginPage'
+import InlineForm from '../components/UserComponet/CreateUser'
+import UserList from '../components/UserComponet/UserList'
+import UserManageProfile from '../components/UserComponet/UserManageProfile'
 
 export const RoutesConfig = [
   {
@@ -9,7 +11,7 @@ export const RoutesConfig = [
     exact: true,
     restricted: true,
     component: LoginPage,
-  },
+  }, 
   {
     path: '/login',
     exact: true,
@@ -28,4 +30,23 @@ export const RoutesConfig = [
     restricted: true,
     component: Reports,
   },
+  {
+    path: '/create-user',
+    exact: true,
+    restricted: true,
+    component: InlineForm,
+  },
+  {
+    path: '/user-list',
+    exact: true,
+    restricted: true,
+    component: UserList,
+  },
+  {
+    path: '/user-profile',
+    exact: true,
+    restricted: true,
+    component: UserManageProfile,
+  },
+  
 ]

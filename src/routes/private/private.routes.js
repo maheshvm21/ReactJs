@@ -12,7 +12,7 @@ export const PrivateRoute = (props) => {
     return (
         <>
             <PrivateLayout>
-                <Header/>
+                {/* <Header/> */}
                 <Route {...props} />
             </PrivateLayout>
         </>

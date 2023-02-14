@@ -2,6 +2,7 @@ import React from 'react'
 import StickyHeadTable from './TableComponet/TableList'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import PieCharts from './ChartComponets/PieChart'
+import NavBar from './Navbar';
 export default function Dashboard() {
     const data = [
         {
@@ -53,6 +54,7 @@ export default function Dashboard() {
   return (
 
     <>
+    <NavBar/>
     <div style={{margin:"auto",width:"50%" ,padding:"10px",textAlign:"center"}}> 
     <h4>Pie chart</h4>
     <PieCharts data1={data_pie} />

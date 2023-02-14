@@ -2,6 +2,7 @@ import React from 'react'
 import StickyHeadTable from './TableComponet/TableList'
 import VisibilityIcon from '@mui/icons-material/Visibility';
 import PieCharts from './ChartComponets/PieChart'
+import NavBar from './Navbar';
 
 
 export default function Reports() {
@@ -54,15 +55,16 @@ export default function Reports() {
       ];
     return (
         <>
-         <div style={{margin:"auto",width:"50%" ,padding:"10px",textAlign:"center"}}> 
-    <h4>Pie chart</h4>
-    <PieCharts data1={data_pie} />
-    </div>
-    <StickyHeadTable
-            data={data}
-            tableHeaders={tableHeaders}
-            tableBodies={tableBodies}
-        />
+        <NavBar/>
+            <div style={{ margin: "auto", width: "50%", padding: "10px", textAlign: "center" }}>
+                <h4>Pie chart</h4>
+                <PieCharts data1={data_pie} />
+            </div>
+            <StickyHeadTable
+                data={data}
+                tableHeaders={tableHeaders}
+                tableBodies={tableBodies}
+            />
         </>
        
     )
